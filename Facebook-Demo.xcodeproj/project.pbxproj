@@ -11,6 +11,7 @@
 		114B77D71CB605F3003994E9 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114B77D61CB605F3003994E9 /* RegistrationViewController.swift */; };
 		114B77DA1CB60707003994E9 /* RegistrationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114B77D81CB60707003994E9 /* RegistrationCollectionViewCell.swift */; };
 		114B77DB1CB60707003994E9 /* RegistrationCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 114B77D91CB60707003994E9 /* RegistrationCollectionViewCell.xib */; };
+		114B77DD1CB616E3003994E9 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114B77DC1CB616E3003994E9 /* Constant.swift */; };
 		11AD68321CB5FD4B00ADFA50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AD68311CB5FD4B00ADFA50 /* AppDelegate.swift */; };
 		11AD68341CB5FD4B00ADFA50 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AD68331CB5FD4B00ADFA50 /* ViewController.swift */; };
 		11AD68371CB5FD4B00ADFA50 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11AD68351CB5FD4B00ADFA50 /* Main.storyboard */; };
@@ -24,6 +25,7 @@
 		114B77D61CB605F3003994E9 /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		114B77D81CB60707003994E9 /* RegistrationCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationCollectionViewCell.swift; sourceTree = "<group>"; };
 		114B77D91CB60707003994E9 /* RegistrationCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegistrationCollectionViewCell.xib; sourceTree = "<group>"; };
+		114B77DC1CB616E3003994E9 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		11AD682E1CB5FD4B00ADFA50 /* Facebook-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Facebook-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		11AD68311CB5FD4B00ADFA50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11AD68331CB5FD4B00ADFA50 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				11AD683A1CB5FD4B00ADFA50 /* LaunchScreen.storyboard */,
 				11AD683D1CB5FD4B00ADFA50 /* Info.plist */,
 				1141641C1CB5FDC300942419 /* Registration.storyboard */,
+				114B77DC1CB616E3003994E9 /* Constant.swift */,
 				114B77D61CB605F3003994E9 /* RegistrationViewController.swift */,
 				114B77D81CB60707003994E9 /* RegistrationCollectionViewCell.swift */,
 				114B77D91CB60707003994E9 /* RegistrationCollectionViewCell.xib */,
@@ -226,6 +229,7 @@
 			files = (
 				114B77D71CB605F3003994E9 /* RegistrationViewController.swift in Sources */,
 				114B77DA1CB60707003994E9 /* RegistrationCollectionViewCell.swift in Sources */,
+				114B77DD1CB616E3003994E9 /* Constant.swift in Sources */,
 				11AD68341CB5FD4B00ADFA50 /* ViewController.swift in Sources */,
 				11AD68321CB5FD4B00ADFA50 /* AppDelegate.swift in Sources */,
 			);

@@ -10,8 +10,15 @@ import UIKit
 
 class RegistrationViewController: UIViewController, UICollectionViewDataSource {
 
+    @IBOutlet weak var collectionViewLayOut: UICollectionViewFlowLayout!
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var pageControl: UIPageControl!
     private let pageCellReuseIdentifier = "RegistrationCollectionViewCell"
+    let pages = [
+        [Constants.image:"image1", Constants.title:"Girl 1", Constants.description:"image 1"],
+        [Constants.image:"image2", Constants.title:"Girl 2", Constants.description:"image 2"],
+        [Constants.image:"image3", Constants.title:"Girl 3", Constants.description:"image 3"],
+    ]
     
     // MARK: UICollectionViewDataSource
     
@@ -23,12 +30,17 @@ class RegistrationViewController: UIViewController, UICollectionViewDataSource {
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 3
+        return pages.count
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(pageCellReuseIdentifier, forIndexPath: indexPath) as! RegistrationCollectionViewCell
-        
+        let page = pages[indexPath.item]
+        cell.pageImageView.image = UIImage(named: page["image"]!)
+        cell.titleLabel.text = page["title"]
+        cell.descriptionLabel.text = page["description"]
+        pageControl.currentPage = indexPath.item
+
         /*
          if indexPath.item % 2 == 0 {
          cell.backgroundColor = UIColor.redColor().colorWithAlphaComponent(0.5)
@@ -42,19 +54,20 @@ class RegistrationViewController: UIViewController, UICollectionViewDataSource {
         return cell
     }
     
-    /*
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         
-        let width = (UIScreen.mainScreen().bounds.width - 1*5)/1
-        let height = width
+        let width = UIScreen.mainScreen().bounds.width
+        let height = UIScreen.mainScreen().bounds.height - 170
         return CGSize(width: width, height: height)
     }
-    */
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.collectionView.registerNib(UINib(nibName: pageCellReuseIdentifier, bundle: nil), forCellWithReuseIdentifier: pageCellReuseIdentifier)
+        
+        //pageControl.currentPage = 0
+        pageControl.numberOfPages = pages.count
 
         // Do any additional setup after loading the view.
     }
