@@ -6,10 +6,10 @@
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Registration View Controller-->
         <scene sceneID="F1d-ma-6E8">
             <objects>
-                <viewController id="eyo-EW-6eY" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RegistrationViewController" id="eyo-EW-6eY" customClass="RegistrationViewController" customModule="Facebook_Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TaG-lk-ASM"/>
                         <viewControllerLayoutGuide type="bottom" id="JnT-4X-Uoh"/>
@@ -37,6 +37,10 @@
                                         </view>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="eyo-EW-6eY" id="9pA-Xl-FwO"/>
+                                    <outlet property="delegate" destination="eyo-EW-6eY" id="Vqw-3X-KMP"/>
+                                </connections>
                             </collectionView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="YE6-Vx-VuJ">
                                 <rect key="frame" x="281" y="438" width="39" height="37"/>
@@ -98,6 +102,9 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="isk-B6-fp2" id="7mr-v1-c6j"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b27-XE-6kF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
