@@ -1,0 +1,6 @@
+framework module Pods_Facebook_Demo {
+  umbrella header "Pods-Facebook-Demo-umbrella.h"
+
+  export *
+  module * { export * }
+}
