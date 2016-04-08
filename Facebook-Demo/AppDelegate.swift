@@ -25,11 +25,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func fbTokenChangeNoti(noti:NSNotification) {
         if FBSDKAccessToken.currentAccessToken() != nil {
             goToView("Main", vc: "SuccessViewController")
-            print("成撚功！")
+            print("Logged In！")
             
         } else {
             goToView("Registration", vc: "RegistrationViewController")
-            print("失撚敗！")
+            print("Signned Out！")
         }
     }
     

@@ -41,41 +41,5 @@
             </objects>
             <point key="canvasLocation" x="245" y="137"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="w16-GR-P45">
-            <objects>
-                <viewController storyboardIdentifier="FailedViewController" id="3ph-KS-Wg3" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Lfj-eR-5fi"/>
-                        <viewControllerLayoutGuide type="bottom" id="GtO-hr-cxA"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="r7F-Wy-nGs">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="失敗乃成功之母" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yLM-FK-oJO">
-                                <rect key="frame" x="202" y="283" width="196" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i5r-vS-PBw" customClass="FBSDKLoginButton">
-                                <rect key="frame" x="281" y="325" width="38" height="30"/>
-                                <state key="normal" title="Login"/>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="yLM-FK-oJO" firstAttribute="centerX" secondItem="r7F-Wy-nGs" secondAttribute="centerX" id="Ip3-Ir-Gdc"/>
-                            <constraint firstItem="i5r-vS-PBw" firstAttribute="top" secondItem="yLM-FK-oJO" secondAttribute="bottom" constant="8" id="Pdn-US-0Mm"/>
-                            <constraint firstItem="i5r-vS-PBw" firstAttribute="centerX" secondItem="r7F-Wy-nGs" secondAttribute="centerX" id="SST-eY-Fa9"/>
-                            <constraint firstItem="yLM-FK-oJO" firstAttribute="centerY" secondItem="r7F-Wy-nGs" secondAttribute="centerY" id="rC4-LX-Ci3"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="meu-29-jRg" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="909" y="137"/>
-        </scene>
     </scenes>
 </document>

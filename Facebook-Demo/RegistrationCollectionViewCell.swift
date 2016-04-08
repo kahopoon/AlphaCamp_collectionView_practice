@@ -17,6 +17,12 @@ class RegistrationCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        //gradient effect
+        let gradient: CAGradientLayer = CAGradientLayer()
+        gradient.frame = UIScreen.mainScreen().bounds
+        gradient.colors = [UIColor.whiteColor().colorWithAlphaComponent(0.2).CGColor, UIColor.blackColor().colorWithAlphaComponent(0.8).CGColor]
+        pageImageView.layer.insertSublayer(gradient, atIndex: 0)
     }
 
 }

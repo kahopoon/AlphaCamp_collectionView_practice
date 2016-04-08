@@ -19,7 +19,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="isk-B6-fp2">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="430"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="Dlq-GY-Wcz">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -43,78 +44,79 @@
                                 </connections>
                             </collectionView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="YE6-Vx-VuJ">
-                                <rect key="frame" x="281" y="438" width="39" height="37"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="37" id="Q9C-Re-0fM"/>
-                                </constraints>
+                                <rect key="frame" x="0.0" y="453" width="600" height="37"/>
                                 <connections>
                                     <action selector="pageChange:" destination="eyo-EW-6eY" eventType="valueChanged" id="g5y-cH-5Q6"/>
                                 </connections>
                             </pageControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FIJ-Nu-Y5b" customClass="FBSDKLoginButton">
-                                <rect key="frame" x="30" y="483" width="540" height="30"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Button">
+                                <rect key="frame" x="30" y="490" width="540" height="30"/>
+                                <state key="normal" title="FB Login Button">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dkn-Op-TVL">
-                                <rect key="frame" x="57" y="521" width="486" height="30"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Button">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dkn-Op-TVL">
+                                <rect key="frame" x="30" y="528" width="540" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="          Sign up or Log in with Email           " image="email">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nwX-Hg-tc9">
-                                <rect key="frame" x="279" y="571" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kLf-TL-fDK">
-                                <rect key="frame" x="329" y="567" width="46" height="30"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NW9-p5-BCw">
+                                <rect key="frame" x="168" y="566" width="265" height="26"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By signing up, you agree to our " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nwX-Hg-tc9">
+                                        <rect key="frame" x="0.0" y="0.0" width="167" height="26"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kLf-TL-fDK">
+                                        <rect key="frame" x="167" y="0.0" width="98" height="26"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                        <state key="normal" title="Terms and Service">
+                                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="dkn-Op-TVL" firstAttribute="top" secondItem="FIJ-Nu-Y5b" secondAttribute="bottom" constant="8" id="1v3-DM-7IK"/>
-                            <constraint firstItem="kLf-TL-fDK" firstAttribute="top" secondItem="nwX-Hg-tc9" secondAttribute="top" id="57h-tU-uib"/>
-                            <constraint firstItem="dkn-Op-TVL" firstAttribute="top" secondItem="FIJ-Nu-Y5b" secondAttribute="bottom" constant="8" id="7tw-KI-cmc"/>
+                            <constraint firstItem="dkn-Op-TVL" firstAttribute="height" secondItem="FIJ-Nu-Y5b" secondAttribute="height" id="07x-OX-I56"/>
+                            <constraint firstItem="dkn-Op-TVL" firstAttribute="width" secondItem="FIJ-Nu-Y5b" secondAttribute="width" id="4Uj-DW-awC"/>
+                            <constraint firstAttribute="trailing" secondItem="YE6-Vx-VuJ" secondAttribute="trailing" id="6Vz-Oa-9nT"/>
                             <constraint firstItem="isk-B6-fp2" firstAttribute="top" secondItem="8OU-Qc-smw" secondAttribute="top" id="AaA-6m-gFv"/>
-                            <constraint firstItem="kLf-TL-fDK" firstAttribute="centerY" secondItem="nwX-Hg-tc9" secondAttribute="centerY" id="BLz-hE-LkI"/>
-                            <constraint firstItem="nwX-Hg-tc9" firstAttribute="centerX" secondItem="8OU-Qc-smw" secondAttribute="centerX" id="Dem-iN-UuP"/>
+                            <constraint firstItem="NW9-p5-BCw" firstAttribute="centerX" secondItem="8OU-Qc-smw" secondAttribute="centerX" id="DIQ-BJ-wGr"/>
+                            <constraint firstItem="FIJ-Nu-Y5b" firstAttribute="centerX" secondItem="8OU-Qc-smw" secondAttribute="centerX" id="GEM-KK-YCY"/>
+                            <constraint firstItem="JnT-4X-Uoh" firstAttribute="top" secondItem="isk-B6-fp2" secondAttribute="bottom" id="Goj-gb-Xc0"/>
+                            <constraint firstItem="dkn-Op-TVL" firstAttribute="top" secondItem="FIJ-Nu-Y5b" secondAttribute="bottom" constant="8" id="HS7-vY-cAT"/>
+                            <constraint firstItem="kLf-TL-fDK" firstAttribute="top" secondItem="dkn-Op-TVL" secondAttribute="top" constant="8" id="LCq-XN-zc7"/>
                             <constraint firstItem="dkn-Op-TVL" firstAttribute="centerX" secondItem="8OU-Qc-smw" secondAttribute="centerX" id="MGN-9D-s6z"/>
+                            <constraint firstItem="NW9-p5-BCw" firstAttribute="bottom" secondItem="dkn-Op-TVL" secondAttribute="bottom" constant="8" id="MYX-PP-g9G"/>
                             <constraint firstItem="YE6-Vx-VuJ" firstAttribute="top" secondItem="isk-B6-fp2" secondAttribute="bottom" constant="100" id="N3J-JC-GJC"/>
                             <constraint firstItem="isk-B6-fp2" firstAttribute="leading" secondItem="8OU-Qc-smw" secondAttribute="leading" id="OBv-RA-Zph"/>
-                            <constraint firstItem="nwX-Hg-tc9" firstAttribute="top" secondItem="dkn-Op-TVL" secondAttribute="bottom" constant="20" id="Phh-E4-Ck2"/>
-                            <constraint firstItem="JnT-4X-Uoh" firstAttribute="top" secondItem="nwX-Hg-tc9" secondAttribute="bottom" constant="8" id="RI9-8T-zIs"/>
-                            <constraint firstItem="YE6-Vx-VuJ" firstAttribute="top" secondItem="isk-B6-fp2" secondAttribute="bottom" constant="8" id="S69-Xg-jpH"/>
-                            <constraint firstItem="JnT-4X-Uoh" firstAttribute="top" secondItem="kLf-TL-fDK" secondAttribute="bottom" constant="8" id="W1S-PO-tE6"/>
-                            <constraint firstItem="kLf-TL-fDK" firstAttribute="leading" secondItem="nwX-Hg-tc9" secondAttribute="trailing" constant="8" id="YgL-7t-WPm"/>
-                            <constraint firstItem="FIJ-Nu-Y5b" firstAttribute="top" secondItem="YE6-Vx-VuJ" secondAttribute="bottom" constant="8" id="drx-Uc-SYl"/>
+                            <constraint firstItem="FIJ-Nu-Y5b" firstAttribute="top" secondItem="YE6-Vx-VuJ" secondAttribute="bottom" id="ZSB-CU-BMM"/>
+                            <constraint firstItem="dkn-Op-TVL" firstAttribute="centerX" secondItem="8OU-Qc-smw" secondAttribute="centerX" id="g9K-0G-F7b"/>
+                            <constraint firstItem="NW9-p5-BCw" firstAttribute="top" secondItem="dkn-Op-TVL" secondAttribute="bottom" constant="8" id="giF-dO-qi1"/>
+                            <constraint firstItem="JnT-4X-Uoh" firstAttribute="top" secondItem="NW9-p5-BCw" secondAttribute="bottom" constant="8" id="hmd-dt-QMY"/>
+                            <constraint firstItem="FIJ-Nu-Y5b" firstAttribute="width" secondItem="8OU-Qc-smw" secondAttribute="width" multiplier="0.9" id="m3o-8w-D3c"/>
                             <constraint firstAttribute="trailing" secondItem="isk-B6-fp2" secondAttribute="trailing" id="pUh-zu-zuR"/>
-                            <constraint firstItem="dkn-Op-TVL" firstAttribute="width" secondItem="FIJ-Nu-Y5b" secondAttribute="width" multiplier="0.9" id="pif-bR-11T"/>
-                            <constraint firstItem="YE6-Vx-VuJ" firstAttribute="centerX" secondItem="8OU-Qc-smw" secondAttribute="centerX" id="ryN-In-Mc6"/>
-                            <constraint firstItem="FIJ-Nu-Y5b" firstAttribute="centerX" secondItem="8OU-Qc-smw" secondAttribute="centerX" id="sWV-QC-kcV"/>
-                            <constraint firstItem="nwX-Hg-tc9" firstAttribute="centerX" secondItem="8OU-Qc-smw" secondAttribute="centerX" id="tHa-Mj-f2J"/>
-                            <constraint firstItem="nwX-Hg-tc9" firstAttribute="top" secondItem="dkn-Op-TVL" secondAttribute="bottom" constant="20" id="xwh-Hh-7Fj"/>
-                            <constraint firstItem="FIJ-Nu-Y5b" firstAttribute="top" secondItem="YE6-Vx-VuJ" secondAttribute="bottom" constant="8" id="yK9-I1-1Tr"/>
-                            <constraint firstItem="FIJ-Nu-Y5b" firstAttribute="width" secondItem="8OU-Qc-smw" secondAttribute="width" multiplier="0.9" id="ykk-bb-Bcf"/>
+                            <constraint firstItem="YE6-Vx-VuJ" firstAttribute="leading" secondItem="8OU-Qc-smw" secondAttribute="leading" id="vpW-jT-pUh"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="N3J-JC-GJC"/>
-                                <exclude reference="W1S-PO-tE6"/>
-                                <exclude reference="57h-tU-uib"/>
+                                <exclude reference="MYX-PP-g9G"/>
+                                <exclude reference="LCq-XN-zc7"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="isk-B6-fp2" id="7mr-v1-c6j"/>
                         <outlet property="collectionViewLayOut" destination="Dlq-GY-Wcz" id="qph-eb-zgX"/>
+                        <outlet property="emailButton" destination="dkn-Op-TVL" id="CYb-i6-oLq"/>
                         <outlet property="pageControl" destination="YE6-Vx-VuJ" id="L2S-gK-7w7"/>
                     </connections>
                 </viewController>
@@ -123,4 +125,7 @@
             <point key="canvasLocation" x="250" y="274"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="email" width="16" height="11"/>
+    </resources>
 </document>
