@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RegistrationViewController: UIViewController, UICollectionViewDataSource {
+class RegistrationViewController: UIViewController, UICollectionViewDataSource, UIScrollViewDelegate {
 
     @IBOutlet weak var collectionViewLayOut: UICollectionViewFlowLayout!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -39,7 +39,7 @@ class RegistrationViewController: UIViewController, UICollectionViewDataSource {
         cell.pageImageView.image = UIImage(named: page["image"]!)
         cell.titleLabel.text = page["title"]
         cell.descriptionLabel.text = page["description"]
-        pageControl.currentPage = indexPath.item
+        //pageControl.currentPage = indexPath.item
 
         /*
          if indexPath.item % 2 == 0 {
@@ -52,6 +52,16 @@ class RegistrationViewController: UIViewController, UICollectionViewDataSource {
         // Configure the cell
         
         return cell
+    }
+    
+    func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+        let pageNum = Int(round(scrollView.contentOffset.x / UIScreen.mainScreen().bounds.width))
+        self.pageControl.currentPage = pageNum
+    }
+    
+    @IBAction func pageChange(sender: AnyObject) {
+        let x = CGFloat(pageControl.currentPage) * self.collectionView.frame.size.width
+        self.collectionView.setContentOffset(CGPointMake(x, 0), animated: true)
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
